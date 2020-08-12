@@ -12,16 +12,7 @@
             <i class="iconfont icon-shezhi"></i>
         </header>
         <main>
-            <Swiper :bannerList="bannerList"></Swiper>
-            <div class="nav">
-                <ul>
-                    <li v-for="(item, index) in navList"
-                        :key="index">
-                        <i :class="['iconfont', item.icon ]"></i>
-                        <p>{{ item.title }}</p>
-                    </li>
-                </ul>
-            </div>
+            <router-view></router-view>
         </main>
         <footer>
             <router-link to="/home/index"
@@ -45,40 +36,8 @@
 </template>
 
 <script>
-import Swiper from "@/components/Home/Swiper"
 export default {
-    data () {
-        return {
-            bannerList: [],
-            navList: [
-                {
-                    title: "限时抢购",
-                    icon: "icon-xianshiqianggou"
-                },
-                {
-                    title: "积分商城",
-                    icon: "icon-jifenshangcheng"
-                },
-                {
-                    title: "联系我们",
-                    icon: "icon-lianxiwomen"
-                },
-                {
-                    title: "商品分类",
-                    icon: "icon-shangpinfenlei"
-                }
-            ]
-        }
-    },
-    components: {
-        Swiper
-    },
-    mounted () {
-        this.$http.get("/getbanner").then(res => {
-            console.log(res)
-            this.bannerList = res.data.list
-        })
-    }
+
 }
 </script>
 
@@ -117,16 +76,6 @@ export default {
     main
         flex 1
         overflow-y auto
-        .nav
-            width 100%
-            height 1.76rem
-            ul
-                height 100%
-                display flex
-                align-items center
-                li
-                    flex 1
-                    text-align center
     footer
         height 1rem
         border-top 0.02rem solid #eee
