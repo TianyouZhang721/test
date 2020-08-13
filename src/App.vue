@@ -1,9 +1,5 @@
 <template>
     <div id="app">
-        <h1>你好</h1>
-        <h2>孙童</h2>
-        <h3>沈铭沣</h3>
-        <h3>史庆</h3>
         <router-view />
     </div>
 </template>
@@ -14,13 +10,8 @@ export default {
 }
 </script>
 
-<style>
-#app {
-    font-family: "Avenir", Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
-}
+<style lang="stylus">
+html,body, #app 
+    width 100%
+    height 100%
 </style>

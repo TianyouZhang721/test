@@ -1,4 +1,12 @@
-console.log(123)
-console.log(234)
-console.log(345)
-console.log(456)
+import Vue from 'vue'
+import Vuex from 'vuex'
+
+Vue.use(Vuex)
+
+export default new Vuex.Store({
+    state: {
+
+    },
+    mutations,
+    actions
+})
