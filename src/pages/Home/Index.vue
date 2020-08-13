@@ -19,6 +19,7 @@
 		},
 		mounted() {
 			let id = this.$route.query.id
+			console.log(id)
 			if (id) {
 				this.comName = "Goods"
 			} else {
