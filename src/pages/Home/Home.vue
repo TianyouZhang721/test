@@ -33,9 +33,10 @@ export default {
     height 100%
     display flex
     flex-direction column
-    
+
     main
         flex 1
+		overflow-x hidden
         overflow-y auto
     footer
         width 100%

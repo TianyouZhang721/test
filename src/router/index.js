@@ -17,10 +17,6 @@ export default new Router({
                   path: "/",
                   redirect: "index"
                 },
-				{
-					path: "goods",
-					component: () => import("@/pages/Home/Goods")
-				},
                 {
                     path: "index",
                     component: () => import("@/pages/Home/Index")
@@ -39,6 +35,13 @@ export default new Router({
 		},{
 			path: "/detail",
 			component: () => import("@/pages/Detail/Detail")
+		},{
+			path: "/login",
+			component: () => import("@/pages/Login/Login")
+		},
+		{
+			path: "/register",
+			component: () => import("@/pages/Register/Register")
 		}
     ]
 })
